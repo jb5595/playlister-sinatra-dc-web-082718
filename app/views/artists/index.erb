@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <%@artists.each do |artist| %>
+    <a href="/artists/<%=artist.slug%>"><h3><%= artist.name %> </h3></a>
+
+    <%end%>
+
+
+
+
+  </body>
+</html>

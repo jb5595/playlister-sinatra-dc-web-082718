@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form action="/songs" method="post">
+<label for="song_name">Name</label>
+<input type="text" name="song_name" id="song_name">
+<label for="artist_name">Artist Name</label>
+<input type="text" name="artist_name" id="artist_name">
+<button type="submit" name="submit">Create</button>
+
+<% Genre.all.each do |genre| %>
+<input id="<%=genre.name%>"type="checkbox" name="genres[]" value="<%= genre.id %>">
+<% end %>
+<!-- 
+<% Artist.all.each do |artist| %>
+<input id="<%=artist.name%>"type="checkbox" name="artists[]" value="<%= artist.id %>">
+<% end %> -->
+
+
+    </form>
+
+  </body>
+</html>
